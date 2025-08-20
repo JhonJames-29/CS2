@@ -21,7 +21,7 @@ Features
 5. Run the program by pressing F5 or clicking 'Run'  
 6. Follow the on-screen instructions to enter user inputs.
 
-\#\#Example Output 
+## Example Output 
 
 \--- Budget Summary \---  
 Food: Spent 50 / Budget 300  Remaining 250  
