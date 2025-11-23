@@ -4,6 +4,81 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
+## Release v1.1 — November 23, 2025
+
+Key Notes:
+- All v1.0.0 functionality retained
+- Typing effect for printing text 't()'
+- Color coding for messages and warnings 'color()'
+- Improved console experience for menus, summaries, and alerts
+- Data still saved and loaded via JSON
+- Minor interface polish
+
+---
+
+## Release v1.0 — November 20, 2025
+
+The first release.
+
+Features:
+- Record total income and add additional income
+- Set budgets for multiple categories '(food, tansport, entertainment, etc.)'
+- Add and track expenses per category
+- View per-category spending, total spent, and remaining money
+- Overspending warnings when expenses exceed budgets
+- Save and load all data using JSON 'budget_data.json'
+- Clean and readable console interface with organized summary layout
+- Input validation to prevent invalid entries
+- Minor interface enhancements: ASCII borders, spacing, and loading prompts
+- Edit / delete categories
+- Edit / delete expenses
+
+---
+
+## Version v0.4.0 — August 28, 2025
+
+Improvements:
+- Introduced section borders and ASCII box headers for the summary screen
+- Consistent spacing in menus for better readability
+- Added simple loading animation for a polished feel
+- Clearer warning messages
+Notes / To-Do:
+- Add JSON saving/loading
+- Edit/delete categories and expenses
+- Export summary to text files
+- Percentage tracking per category
+- Prepare for full UI overhaul
+
+---
+
+## Version v0.3.0 — August 20, 2025
+
+Patchnotes:
+- New menu layout for better clarity
+- Better formatting of budget summary
+- Improved text alignment for categories and amounts
+- Small refactor of menu printing
+Notes / To-Do:
+- UI improvements
+- JSON data saving
+- Edit/delete functionality
+
+---
+
+## Version v0.2.1 — August 17, 2025
+
+Key Notes:
+- Added basic input validation for numbers
+- Prevented negative budgets and expenses
+- Cleaned printed messages
+- Improved overspending warnings
+Missing Features / To-Do:
+- UI improvements
+- JSON data saving
+- Edit/delete functionality
+
+---
+
 ## Version v0.2.0 — August 15, 2025
 
 Improvements:  
@@ -12,8 +87,8 @@ A whole new different calculation. (Beta release)
 - Now it depends on the income.  
 - Income can be added.  
 - Better overspending warnings.  
-  Notes:  
-- Missing Features/To-Do:  
+Notes:  
+- Missing Features / To-Do:  
   - The use of JSON for saving data.  
   - Input validations to prevent crashes.  
   - Edit or delete categories and expenses.  
@@ -42,7 +117,7 @@ A whole new different calculation. (Beta release)
   - Set a budget per category.  
   - Add expenses per category.  
   - View spendings per category and total spent.  
-- Missing Features/To-Do:  
+- Missing Features / To-Do:  
   - The use of JSON for saving data.  
   - Expenses can exceed the allocated budget without any warnings.  
   - Input validations to prevent crashes.  
