@@ -29,27 +29,27 @@ Features:
 3. Run the program in your terminal or IDE.
 4. Follow on-screen prompts to manage, income, categories, and expenses.
 
-:Note: Release v1.1 includes animated typing and color effects for an enhanced user experience.
+Note: Release v1.1 includes animated typing and color effects for an enhanced user experience.
 
 ## Example Output: 
 
-'========================'
-'      Budget Summary'
-'========================'
-'Food         | Budget: 300 | Spent: 50 | Remaining: 250'
-'Transport    | Budget: 200 | Spent: 100 | Remaining: 100'
-'------------------------'
-'Total income:   1000'
-'Total spent:    150'
-'Remaining:      850'
-'!!! Category overspent!' (shown in red)
+    ========================
+      Budget Summary
+    ========================
+    Food         | Budget: 300 | Spent: 50 | Remaining: 250
+    Transport    | Budget: 200 | Spent: 100 | Remaining: 100
+    ------------------------
+    Total income:   1000
+    Total spent:    150
+    Remaining:      850
+    !!! Category overspent! (shown in red)
 
 ## Notes
 
 - All data is saved locally in budget_data.json for persistence between sessions
 - Future improvements may include: exporting reports, advanced UI, and category-based percentages
 
-:Contributers:
+## Contributers:
 
 - Student 1: Sam Arquita  (encoded the program, did the changelog)  
 - Student 2: Navine Bolo (gave the idea, wrote the readme)  
