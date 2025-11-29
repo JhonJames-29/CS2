@@ -21,6 +21,9 @@ Features:
 - Typing effect for dynamic text display
 - Color-coded messages for warnings, confirmations, and summaries
 - Polished menu and summary interface
+- Category Spending Chart: Visual graph showing percentage of budget spent per category
+- Save and load all data using JSON (budget_data.json)
+- Auto-save feature: Automatically saves changes after
 
 ## How to Run the Program:
 
@@ -33,16 +36,56 @@ Note: Release v1.1 includes animated typing and color effects for an enhanced us
 
 ## Example Output: 
 
+**Sample Data (from .json):**
+
+    income = 2000
+    categories = {
+        "Food": 500,
+        "Transport": 300,
+        "Entertainment": 400,
+        "Bills": 600
+    }
+    expenses = [
+        {"category": "Food", "amount": 450},
+        {"category": "Transport", "amount": 320},
+        {"category": "Entertainment", "amount": 200},
+        {"category": "Bills", "amount": 600}
+    ]
+
+**Summary:**
+
+    ╔════════════════════════════════════════╗
+    ║           Budget Tracker v1.2          ║
+    ║               --Summary--              ║
+    ╚════════════════════════════════════════╝
+    Food         | Budget: 500    | Spent: 450    | Remaining: 50
+    Transport    | Budget: 300    | Spent: 320    | Remaining: -20
+    Entertainment| Budget: 400    | Spent: 200    | Remaining: 200
+    Bills        | Budget: 600    | Spent: 600    | Remaining: 0
+    
+    ========Overall=========
+    Total income:   2000
+    Total spent:    1570
+    Remaining:      430
     ========================
-      Budget Summary
+
+**Graph**
+
+    ╔════════════════════════════════════════╗
+    ║           Budget Tracker v1.2          ║
+    ║       --Category Spending Chart--      ║
+    ╚════════════════════════════════════════╝
+
+    Food         |████████████████----| 450/500
+    Transport    |████████████████████| 320/300   <-- red, overspent
+    Entertainment|██████████----------| 200/400
+    Bills        |████████████████████| 600/600
+
+    ========Overall=========
+    Total income:   2000
+    Total spent:    1570
+    Remaining:      430
     ========================
-    Food         | Budget: 300 | Spent: 50 | Remaining: 250
-    Transport    | Budget: 200 | Spent: 100 | Remaining: 100
-    ------------------------
-    Total income:   1000
-    Total spent:    150
-    Remaining:      850
-    !!! Category overspent! (shown in red)
 
 ## Notes
 
