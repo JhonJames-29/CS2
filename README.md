@@ -77,7 +77,7 @@ Note: Release v1.1 includes animated typing and color effects for an enhanced us
     ╚════════════════════════════════════════╝
 
     Food         |████████████████----| 450/500
-    Transport    |████████████████████| 320/300   <-- red, overspent
+    Transport    |████████████████████| 320/300
     Entertainment|██████████----------| 200/400
     Bills        |████████████████████| 600/600
 
