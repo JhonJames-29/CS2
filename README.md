@@ -32,7 +32,9 @@ Features:
 3. Run the program in your terminal or IDE.
 4. Follow on-screen prompts to manage, income, categories, and expenses.
 
-Note: Release v1.1 includes animated typing and color effects for an enhanced user experience.
+**Notes:**
+Release v1.1 includes animated typing and color effects for an enhanced user experience.
+Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
 
 ## Example Output: 
 
