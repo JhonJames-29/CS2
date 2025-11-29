@@ -4,6 +4,22 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
+## Release v1.2 — November 29, 2025
+
+Key Notes: 
+New Features
+
+- Auto-Save Functionality
+- Spending Chart
+  - Provides an easy-to-read snapshot of budget usage per category.
+  - Overspending is highlighted in red.
+- View Options Sub-Menu
+  - Users can choose between:
+    - Summary View: Classic detailed list of categories, budgets, spent, remaining.
+    - Chart View: Graphical representation with bars for each category.
+
+---
+
 ## Release v1.1 — November 23, 2025
 
 Key Notes:
