@@ -33,9 +33,8 @@ Features:
 4. Follow on-screen prompts to manage, income, categories, and expenses.
 
 **Notes:**
-Release v1.1 includes animated typing and color effects for an enhanced user experience.
-
-Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
+- Release v1.1 includes animated typing and color effects for an enhanced user experience.
+- Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
 
 ## Example Output: 
 
