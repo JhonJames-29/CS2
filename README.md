@@ -38,7 +38,7 @@ Features:
 
 ## Example Output: 
 
-**Sample Data (from .json):**
+**Sample Data (from user input):**
 
     income = 2000
     categories = {
