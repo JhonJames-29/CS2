@@ -4,6 +4,13 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
+## Release v1.3 — November 30, 2025
+
+Bugfix:
+- Fixed an issue relating on saving the data due to missing parameters.
+
+---
+
 ## Release v1.2 — November 29, 2025
 
 Key Notes: 
