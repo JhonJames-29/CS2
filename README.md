@@ -35,6 +35,7 @@ Features:
 **Notes:**
 - Release v1.1 includes animated typing and color effects for an enhanced user experience.
 - Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
+- Release v1.3 includes fixing a data issue due to missing parameters for a trouble-free user experience. 
 
 ## Example Output: 
 
