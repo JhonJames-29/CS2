@@ -4,6 +4,30 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
+## Release v2.0 — February 2025
+
+The second major release of the Budget Tracker.
+
+Key Notes:
+Brand new implementations:
+
+- Security System (New):
+  - Password protection on startup
+  - SHA-256 password hashing
+  - 3-attempt login limit
+  - Password change option
+  - Session authentication
+- Data Protection and Reliability
+- Income and Savings Enhancments
+  - Visual savings progress bar
+  - Financial health indicator
+- Cleaner UI
+
+Difficulties:
+- There may be times that the code will break due to circumstances that involves the password-related functions, the data-handling functions, and graphing functions. New releases will launch after such bugs will be fixed.
+
+---
+
 ## Release v1.3 — November 30, 2025
 
 Bugfix:
