@@ -61,12 +61,19 @@ This program is suitable for beginners, students, or anyone looking for a simple
 
 ## Prerequisite 
 
-- Python 3.8 or higher
-- Optional (for graphs): download the library "matplotlib" in command prompt:
+### If user used the python (.py) file:
+The user must have:
+- Python 3.8 or higher (Latest version is recommendable)
+- Optional (for graphs): download the library "matplotlib" in command prompt (Win + R, "cmd.exe"):
 
       pip install matplotlib
 
+### If user used the python executable (.exe) file:
+The user must have the operating system Windows 10/11 (As executable files are only compatible to Windows only.)
+
 ## How to Run the Program:
+
+### (If a .py is used )
 
 1. Make sure Python is installed.
 2. Download the latest release file.
