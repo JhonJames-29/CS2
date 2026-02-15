@@ -80,7 +80,7 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Restore from backup option
 - Input validation for numbers and dates
 
-> [!NOTE]
+> [!CAUTION]
 > Hashed passwords are hard to retrieve. Forgetting the password would hinder the program useless as the required password was not given.
 
 ---
@@ -185,10 +185,9 @@ The user must have the operating system Windows 10/11 (As executable files are o
 
     Savings: [██████████████------] $430/$1000 (43%)
 
-## Notes
-
-- All data is saved locally in budget_data.json for persistence between sessions
-- Future improvements may include: exporting reports (PDF or CSV), category-based percentages, and SQL implementations via sqlite3 library
+> [!NOTE]
+> - All data is saved locally in budget_data.json for persistence between sessions
+> - Future improvements may include: exporting reports (PDF or CSV), category-based percentages, and SQL implementations via sqlite3 library
 
 ## Contributers:
 
