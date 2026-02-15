@@ -4,7 +4,7 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
-## Release v2.0 — February 2025
+## Release v2.0 — February 13, 2025
 
 The second major release of the Budget Tracker.
 
