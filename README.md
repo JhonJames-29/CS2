@@ -44,7 +44,6 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Toggleable auto-save feature
 - System-friendly for CLI (Windows and Unix-based systems)
 
-Lightweight and portable — can be converted into a standalone executable with PyInstaller
 ## Data Files:
 - budget_data.json — Main data file
 - budget_backup.json — Automatic backup file
