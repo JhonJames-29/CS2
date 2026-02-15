@@ -159,10 +159,10 @@ The user must have the operating system Windows 10/11 (As executable files are o
     - Input validation prevents corrupted entries or accidental entries.
     - Authentication (via password) limits unauthorize access.
 - #### Responsible Use of AI Assistance ([Claude](https://claude.ai/login), [Anthropic](https://www.anthropic.com/))
->    ##### "To refine the password handling mechanisms and optimize certain funtions, we used AI-assisted tools, more specifically, Claude and Claude Code. However, the overall system design, the structural decisions, knowing what libraries to use (library research), and the integration of the libraries we're independently performed by me!"
->    ##### "Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
->    ##### "It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
->    ###### __*"-Sam"*__
+> ##### &nbsp;&nbsp;&nbsp;&nbsp;"To refine the password handling mechanisms and optimize certain funtions, we used AI-assisted tools, more specifically, Claude and Claude Code. However, the overall system design, the structural decisions, knowing what libraries to use (library research), and the integration of the libraries we're independently performed by me!"
+> ##### &nbsp;&nbsp;&nbsp;&nbsp;"Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
+> ##### &nbsp;&nbsp;&nbsp;&nbsp;"It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
+> ###### _**"Sincerely,"**_<br/>_**"-Sam"**_
 
 ---
 
