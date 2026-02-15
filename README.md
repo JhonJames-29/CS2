@@ -10,6 +10,8 @@ Version 2.0 introduces major upgrades including password protection, recurring e
 
 This program is suitable for beginners, students, or anyone looking for a simple way to understand their financial habits.
 
+---
+
 ## Features: 
 
 - Record total income and add additional income
@@ -44,10 +46,14 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Toggleable auto-save feature
 - System-friendly for CLI (Windows and Unix-based systems)
 
+---
+
 ## Data Files:
 - budget_data.json — Main data file
 - budget_backup.json — Automatic backup file
 - password.txt — Encrypted password storage
+
+---
 
 ## New Implementations:
 
@@ -74,7 +80,12 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Restore from backup option
 - Input validation for numbers and dates
 
-## Prerequisite 
+> [!NOTE]
+> Hashed passwords are hard to retrieve. Forgetting the password would hinder the program useless as the required password was not given.
+
+---
+
+## Prerequisite/s: 
 
 ### If user used the python (.py) file:
 The user must have:
@@ -133,11 +144,11 @@ The user must have the operating system Windows 10/11 (As executable files are o
     - Backup system prevents accidental data loss during data cuorruption.
     - Input validation prevents corrupted entries or accidental entries.
     - Authentication (via password) limits unauthorize access.
-- #### Responsible Use of AI Assistance (Claude, Anthropic)
-    ##### "To refine the password handling mechanisms and optimize certain funtions, we used AI-assisted tools, more specifically, Claude and Claude Code. However, the overall system design, the structural decisions, knowing what libraries to use (library research), and the integration of the libraries we're independently performed by me!"
-    ##### "Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
-    ##### "It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
-    ###### "-Sam"
+- #### Responsible Use of AI Assistance ([Claude](https://claude.ai/login), [Anthropic](https://www.anthropic.com/))
+>    ##### "To refine the password handling mechanisms and optimize certain funtions, we used AI-assisted tools, more specifically, Claude and Claude Code. However, the overall system design, the structural decisions, knowing what libraries to use (library research), and the integration of the libraries we're independently performed by me!"
+>    ##### "Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
+>    ##### "It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
+>    ###### __*"-Sam"*__
  
 ## **Notes to Consider:**
 - Release v1.1 includes animated typing and color effects for an enhanced user experience.
