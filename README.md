@@ -64,7 +64,7 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Change password option
 - Session authentication
 
-### Savings & Financial Health (NEW in v2.0)
+### Savings & Financial Health
 - Set savings goals
 - Visual savings progress bar
 - Automatic savings percentage calculation
