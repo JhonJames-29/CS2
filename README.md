@@ -1,5 +1,7 @@
 # Project Title: Budget Tracker
 
+---
+
 ## Project Description
 
 Budget Tracker is designed to help users manage their personal finances whilst being lightweight. It allows users to track income, set budgets for multiple  categories, record and manage expenses, and view clear summaries of their spending. 
@@ -71,7 +73,51 @@ This program is suitable for beginners, students, or anyone looking for a simple
 3. Run the program in your terminal or IDE.
 4. Follow on-screen prompts to manage, income, categories, and expenses.
 
-**Notes:**
+# **Methodology:**
+
+## 1. Implementation of Core Features
+- The Budget Tracker system was developed using Python and follows an object-oriented design. The core features were included such as:
+
+    1. Income Management - The manipulation of total income, stored as a numeric attribute within the BudgetTracker class.
+    2. Budget Category Management
+    3. Expense Tracking
+    4. Recurring Expense System
+    5. Passowrd Authentication - The password system is handled by the PasswordManager class.
+    6. Data Persistence and Backup - Financial data is stored in a JSON file format for readability, storage, and easy access.
+    7. Graph Integration - Data can be represented in a Graph.
+
+## 2. **Technologies used**
+| Technology | Purpose | Justification |
+| -------- | -------- | -------- |
+| Python | Code development language. | Python uses simple, readable syntax which also includes a strong library support |
+| JSON | Storage for data | A .json file is lightweight, readable, and does not require a database. |
+| hashlib (SHA-256) | Used to hash passwords | A standard for hashing.
+| matplotlib | Data visualization | Widely used and reliable at plotting data as graphs.
+| Pyinstaller | Converts a .py file into an executable file (.exe) | Enables standalone distribution without requiring users to install Python.
+
+## 3. **Key Design Decisions and Trade-offs:**
+- We decided to use JSON instead of an SQL Database as it is simple to setup and does not require an installation, but this won't allow us to scale up for large databases because the system only targets individual users.
+- We used SHA-256 hashing for password storage. Although it is secure and lightweight, it is the only encryption layer for protecting passwords.
+- We also developed the program as a CLI (Command Line Interface) application instead of a GUI (Graphical User Interface) application as it is lightweight and faster to develope. Although it is less visually interactive, the focus of the project is financial logic and simple data handling rather than graphicall interface design.
+- Lastly, we've implemented the use of a toggleable auto-save feature. It prevents accidental data lass and improves reliability, but it slightly increase file write operations.
+
+## **4. Ethical Considerations**
+- User Privacy:
+    - Passwords collected are hashed, not stored in plain text for encryption.
+    - Financial data is stored locally.
+    - No data is transmitted over the internet.
+    - No third-party tracking is included (as the program is soly based on calculations done from the computer.)
+- Data Protection
+    - Backup system prevents accidental data loss during data cuorruption.
+    - Input validation prevents corrupted entries or accidental entries.
+    - Authentication (via password) limits unauthorize access.
+- #### Responsible Use of AI Assistance (Claude, Anthropic)
+    ##### "To refine the password handling mechanisms and optimize certain funtions, we used AI-assisted tools, more specifically, Claude and Claude Code. However, the overall system design, the structural decisions, knowing what libraries to use (library research), and the integration of the libraries we're independently performed by me!"
+    ##### "Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
+    ##### "It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
+    ###### "-Sam"
+ 
+## **Notes to Consider:**
 - Release v1.1 includes animated typing and color effects for an enhanced user experience.
 - Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
 - Release v1.3 includes fixing a data issue due to missing parameters for a trouble-free user experience.
