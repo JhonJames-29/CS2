@@ -13,22 +13,38 @@ This program is suitable for beginners, students, or anyone looking for a simple
 ## Features: 
 
 - Record total income and add additional income
+- Set total income (replaces current value)
 - Set budgets for multiple categories (food, transport, entertainment, etc.)
-- Add and track expenses per category
 - Edit and delete categories
-- Edit and delete expenses
+- Add and track expenses per category
+- Edit and delete individual expenses
+- Add recurring expenses with specified frequency (daily, weekly, monthly)
+- Automatic application of recurring expenses based on frequency
 - View per-category spending, total spent, and remaining money
-- Overspending warnings when expenses exceed budgets
+- Overspending warnings when expenses exceed budgets or reach 80% of budget
+- View savings goal and track progress toward it
+- Visual savings progress bar showing percentage of goal achieved
+- View monthly expenses and breakdown by category
+- Search expenses by category or date range
+- Financial health indicator (Healthy / Caution / Overspending)
+- Graphical reports using matplotlib:
+    - Category Spending Chart (Budget vs Spent per category)
+    - Monthly Expense Trend
 - Save and load all data using JSON (budget_data.json)
+- Backup and restore data to prevent accidental loss (budget_backup.json)
+- Auto-save feature: Automatically saves changes when enabled
+- Password protection with hashed passwords (SHA-256)
+- Password masking during input
+- Password change functionality
+- Input validation for numeric values, dates, and non-empty strings
 - Clean and readable console interface with organized summary layout
-- Input validation to prevent invalid entries
 - Typing effect for dynamic text display
 - Color-coded messages for warnings, confirmations, and summaries
-- Polished menu and summary interface
-- Category Spending Chart: Visual graph showing percentage of budget spent per category
-- Save and load all data using JSON (budget_data.json)
-- Auto-save feature: Automatically saves changes after
+- Polished menu interface with clear navigation
+- Toggleable auto-save feature
+- System-friendly for CLI (Windows and Unix-based systems)
 
+Lightweight and portable — can be converted into a standalone executable with PyInstaller
 ## Data Files:
 - budget_data.json — Main data file
 - budget_backup.json — Automatic backup file
