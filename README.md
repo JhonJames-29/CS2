@@ -112,6 +112,10 @@ The user must have the operating system Windows 10/11 (As executable files are o
 3. Run the program in your terminal or IDE.
 4. Follow on-screen prompts to manage, income, categories, and expenses.
 
+### (If a .exe is used)
+1. Double tap the executable file
+2. Follow on-screen prompts to manage, income, categories, and expenses.
+
 ---
 
 # **Methodology:**
