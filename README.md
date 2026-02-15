@@ -80,6 +80,8 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Restore from backup option
 - Input validation for numbers and dates
 
+---
+
 > [!CAUTION]
 > Hashed passwords are hard to retrieve. Forgetting the password would hinder the program useless as the required password was not given.
 
@@ -94,8 +96,12 @@ The user must have:
 
       pip install matplotlib
 
+---
+
 ### If user used the python executable (.exe) file:
 The user must have the operating system Windows 10/11 (As executable files are only compatible to Windows only.)
+
+---
 
 ## How to Run the Program:
 
@@ -105,6 +111,8 @@ The user must have the operating system Windows 10/11 (As executable files are o
 2. Download the latest release file.
 3. Run the program in your terminal or IDE.
 4. Follow on-screen prompts to manage, income, categories, and expenses.
+
+---
 
 # **Methodology:**
 
@@ -119,6 +127,8 @@ The user must have the operating system Windows 10/11 (As executable files are o
     6. Data Persistence and Backup - Financial data is stored in a JSON file format for readability, storage, and easy access.
     7. Graph Integration - Data can be represented in a Graph.
 
+---
+
 ## 2. **Technologies used**
 | Technology | Purpose | Justification |
 | -------- | -------- | -------- |
@@ -128,11 +138,15 @@ The user must have the operating system Windows 10/11 (As executable files are o
 | matplotlib | Data visualization | Widely used and reliable at plotting data as graphs.
 | Pyinstaller | Converts a .py file into an executable file (.exe) | Enables standalone distribution without requiring users to install Python.
 
+---
+
 ## 3. **Key Design Decisions and Trade-offs:**
 - We decided to use JSON instead of an SQL Database as it is simple to setup and does not require an installation, but this won't allow us to scale up for large databases because the system only targets individual users.
 - We used SHA-256 hashing for password storage. Although it is secure and lightweight, it is the only encryption layer for protecting passwords.
 - We also developed the program as a CLI (Command Line Interface) application instead of a GUI (Graphical User Interface) application as it is lightweight and faster to develope. Although it is less visually interactive, the focus of the project is financial logic and simple data handling rather than graphicall interface design.
 - Lastly, we've implemented the use of a toggleable auto-save feature. It prevents accidental data lass and improves reliability, but it slightly increase file write operations.
+
+---
 
 ## **4. Ethical Considerations**
 - User Privacy:
@@ -149,12 +163,16 @@ The user must have the operating system Windows 10/11 (As executable files are o
 >    ##### "Claude is very smart at assistance, especially if the needed assistance involves coding. Since some features from our program is out of our knowledge, it was best to have assistance from Claude, as the AI is efficient, smart and solves problems that does not require any form of debugging."
 >    ##### "It's important to denote that despite we used AI, we shouldn't use it as a replacement. Understanding the code is also needed! :D"
 >    ###### __*"-Sam"*__
- 
+
+---
+
 ## **Notes to Consider:**
 - Release v1.1 includes animated typing and color effects for an enhanced user experience.
 - Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
 - Release v1.3 includes fixing a data issue due to missing parameters for a trouble-free user experience.
 - Release v2.0 includes new implementations that enhances user experience while maintaining security.
+
+---
 
 ## Example Output: 
 
@@ -169,9 +187,13 @@ The user must have the operating system Windows 10/11 (As executable files are o
         "Bills": 600
     }
 
+---    
+
 **Dashboard Summary:**
 
     Income: $2000.00 | Spent: $1570.00 | Remaining: $430.00 | Health: █ Caution
+
+---
 
 **Category Overview:**
 
@@ -180,6 +202,7 @@ The user must have the operating system Windows 10/11 (As executable files are o
     Entertainment| Budget: 400.00 | Spent: 200.00 | Remain: 200.00 | 50.0%
     Bills        | Budget: 600.00 | Spent: 600.00 | Remain: 0.00   | 100.0%
 
+---
 
 **Graph (Saving Progress):**
 
@@ -188,6 +211,8 @@ The user must have the operating system Windows 10/11 (As executable files are o
 > [!NOTE]
 > - All data is saved locally in budget_data.json for persistence between sessions
 > - Future improvements may include: exporting reports (PDF or CSV), category-based percentages, and SQL implementations via sqlite3 library
+
+---
 
 ## Contributers:
 
