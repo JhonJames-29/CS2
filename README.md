@@ -53,6 +53,30 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - budget_backup.json — Automatic backup file
 - password.txt — Encrypted password storage
 
+## Data Structures:
+**Data Storage Format (JSON):**
+
+```json
+{
+    "income": 2000,
+    "categories": {
+        "Food": 500,
+        "Transport": 300
+    },
+    "expenses": [
+        {
+            "category": "Food",
+            "amount": 450,
+            "date": "2025-02-01",
+            "recurring": false
+        }
+    ],
+    "savings_goal": 500,
+    "recurring_expenses": [],
+    "autosave": true
+}
+```
+
 ---
 
 ## New Implementations:
@@ -94,7 +118,9 @@ The user must have:
 - Python 3.8 or higher (Latest version is recommendable)
 - Optional (for graphs): download the library "matplotlib" in command prompt (Win + R, "cmd.exe"):
 
-      pip install matplotlib
+```bash
+pip install matplotlib
+```
 
 ---
 
@@ -183,36 +209,111 @@ The user must have the operating system Windows 10/11 (As executable files are o
 
 **Sample Data (from user input):**
 
-    income = 2000
-
-    categories = {
-        "Food": 500,
-        "Transport": 300,
-        "Entertainment": 400,
-        "Bills": 600
-    }
-
+```python
+income = 2000
+categories = {
+    "Food": 500,
+    "Transport": 300,
+    "Entertainment": 400,
+    "Bills": 600
+}
+expenses = [
+    {"category": "Food", "amount": 450, "date": "2025-02-01"},
+    {"category": "Transport", "amount": 320, "date": "2025-02-03"},
+    {"category": "Entertainment", "amount": 200, "date": "2025-02-05"},
+    {"category": "Bills", "amount": 600, "date": "2025-02-10"}
+]
+```
+ 
 ---    
+
+**Dashboard Menu:**
+
+```python
+╔══════════════════════════════════════════════════════════╗
+║  Budget Tracker v2.0                                     ║
+║  MAIN DASHBOARD                                          ║
+╚══════════════════════════════════════════════════════════╝
+
+Income: $2000.00 | Spent: $1570.00 | Remaining: $430.00 | Health: █ Caution [YELLOW]
+
+═══ BUDGET MANAGEMENT ═══
+ 1) Set Category Budget
+ 2) Edit Category Budget
+ 3) Delete Category
+...
+```
+---
 
 **Dashboard Summary:**
 
-    Income: $2000.00 | Spent: $1570.00 | Remaining: $430.00 | Health: █ Caution
+```python
+Income: $2000.00 | Spent: $1570.00 | Remaining: $430.00 | Health: █ Caution [YELLOW]
+```
 
 ---
 
 **Category Overview:**
 
-    Food         | Budget: 500.00 | Spent: 450.00 | Remain: 50.00  | 90.0%
-    Transport    | Budget: 300.00 | Spent: 320.00 | Remain: -20.00 | 106.7%
-    Entertainment| Budget: 400.00 | Spent: 200.00 | Remain: 200.00 | 50.0%
-    Bills        | Budget: 600.00 | Spent: 600.00 | Remain: 0.00   | 100.0%
+```python
+CATEGORY STATUS
+Food            | Budget: $500.00   | Spent: $450.00   | Remain: $50.00    |  90.0%
+Transport       | Budget: $300.00   | Spent: $320.00   | Remain: $-20.00   | 106.7% [RED]
+Entertainment   | Budget: $400.00   | Spent: $200.00   | Remain: $200.00   |  50.0%
+Bills           | Budget: $600.00   | Spent: $600.00   | Remain: $0.00     | 100.0% [YELLOW]
+    
+TOTALS: Budget: $1800.00 | Spent: $1570.00
+```
 
 ---
 
 **Graph (Saving Progress):**
 
-    Savings: [██████████████------] $430/$1000 (43%)
+```python
+Savings: [████████████████----] $430/$500 (86%)
+```
 
+---
+
+**Monthly View (February 2025):**
+
+```python
+Expenses for 2025-02:
+
+Food: $450.00
+    2025-02-01 | $450
+
+Transport: $320.00
+    2025-02-03 | $320
+
+Entertainment: $200.00
+    2025-02-05 | $200
+
+Bills: $600.00
+    2025-02-10 | $600
+
+Total spent: $1570.00
+```
+
+---
+
+### **Release Notes**
+Release v2.0 includes:
+
+- Complete code refactoring and error fixes*
+- Password protection system with SHA-256 hashing
+- Recurring expense automation
+- Monthly expense views with grouping
+- Search functionality (by category or date range)
+- Savings goal tracking with progress bar
+- Financial health indicator
+- Interactive graphs (category chart and monthly trend)
+- Automatic backup system
+- Session-based authentication
+- Improved error handling and validation
+- Better user interface with organized menus
+-All previous features enhanced and stabilized
+    
 > [!NOTE]
 > - All data is saved locally in budget_data.json for persistence between sessions
 > - Future improvements may include: exporting reports (PDF or CSV), category-based percentages, and SQL implementations via sqlite3 library
