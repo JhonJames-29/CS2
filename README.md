@@ -318,6 +318,21 @@ Release v2.0 includes:
 > - All data is saved locally in budget_data.json for persistence between sessions
 > - Future improvements may include: exporting reports (PDF or CSV), category-based percentages, and SQL implementations via sqlite3 library
 
+## Security Considerations
+- Passwords are hashed using SHA-256 (not stored in plain text)
+- Password file should be kept secure
+- JSON data files are not encrypted (for future enhancement)
+- Session authentication prevents repeated password prompts
+
+## Known Limitations
+- Terminal colors may not work correctly on all terminals
+- Matplotlib is optional but required for graph features
+- Password file is stored locally (not cloud-synced)
+- Data persistence uses JSON files (not encrypted)
+- Single-user system (no multi-user support)
+
+add this nalang before sa contributers
+
 ---
 
 ## Contributers:
