@@ -4,7 +4,14 @@ This file lists all the updates made to our Simple Budget Tracker project.
 
 ---
 
-## Release v2.0 — February 13, 2025
+## Release v2.1 — Febuary 16, 2026
+
+**Bugfix:**
+Fixed: Data files now correctly load from BudgetTrackerData folder in user's home directory instead of current working directory
+
+---
+
+## Release v2.0 — February 13, 2026
 
 The second major release of the Budget Tracker.
 
