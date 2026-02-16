@@ -331,8 +331,6 @@ Release v2.0 includes:
 - Data persistence uses JSON files (not encrypted)
 - Single-user system (no multi-user support)
 
-add this nalang before sa contributers
-
 ---
 
 ## Contributers:
