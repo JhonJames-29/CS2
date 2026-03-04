@@ -343,3 +343,4 @@ Release v2.0 includes:
 
 Our group !
 <img width="1649" height="953" alt="67" src="https://github.com/user-attachments/assets/ac1a4d84-a590-4f1d-85bb-aa5d580eaa22" />
+**Credits to Navine**
