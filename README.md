@@ -338,3 +338,8 @@ Release v2.0 includes:
 - Student 1: Sam Arquita  (encoded the program, did the changelog)  
 - Student 2: Navine Bolo (gave the idea, wrote the readme)  
 - Student 3: Ashley Makinano (made a rough Flowgorithm for version 0.0.1, made the proposal )
+
+---
+
+Our group !
+<img width="1649" height="953" alt="67" src="https://github.com/user-attachments/assets/ac1a4d84-a590-4f1d-85bb-aa5d580eaa22" />
