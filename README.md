@@ -202,6 +202,7 @@ The user must have the operating system Windows 10/11 (As executable files are o
 - Release v1.2 includes the toggle of autosave, and includes an illustration of data by a graph.
 - Release v1.3 includes fixing a data issue due to missing parameters for a trouble-free user experience.
 - Release v2.0 includes new implementations that enhances user experience while maintaining security.
+- Test Release v0.4.0b1_gui includes GUI implementations that drastically enhances user experience.
 
 ---
 
