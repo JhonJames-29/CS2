@@ -1,8 +1,22 @@
 # CHANGELOG
 
-This file lists all the updates made to our Simple Budget Tracker project.
+This file lists all the updates made to our Budget Tracker project.
 
 ---
+
+## Test Release v0.4.0b1_gui — March 11, 2026
+**New implementation of GUI's!**
+
+*New:*
+- Uses the logic in beta version 0.4.0, then converted into a GUI-based program for a test release.
+- Used Python's default GUI library–Tkinter
+
+*Added:*
+- Bugfixes present in beta version 0.4.0 (Proper indication of currency, does not allow negative values.)
+- Help manu as a quick guide for users!
+
+*Difficulties:*
+- Since implementing GUI's are very big and complicated, starting off as a small, test release could help develop skills so that we could proceed to the full release (with v2.1's logic!)
 
 ## Release v2.1 — Febuary 16, 2026
 
