@@ -26,6 +26,8 @@ This file lists all the updates made to our Budget Tracker project.
 
 **NOTE:** The logic of the major release version 3.0 will be based on version 2.2!
 
+---
+
 ## Test Release v0.4.0b1_gui — March 11, 2026
 **New implementation of GUI's!**
 
