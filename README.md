@@ -203,6 +203,7 @@ The user must have the operating system Windows 10/11 (As executable files are o
 - Release v1.3 includes fixing a data issue due to missing parameters for a trouble-free user experience.
 - Release v2.0 includes new implementations that enhances user experience while maintaining security.
 - Test Release v0.4.0b1_gui includes GUI implementations that drastically enhances user experience. Although not recommended for use, this serves as the foundation of the transition into a GUI based program. [Test Release Only!!!]
+- Release v2.2's logic will be implemented to major release v3.0!
 
 ---
 
@@ -314,6 +315,18 @@ Release v2.0 includes:
 - Improved error handling and validation
 - Better user interface with organized menus
 -All previous features enhanced and stabilized
+
+Release v2.2 includes: 
+
+- Expense notes field — optional description on each expense
+- View and Delete Recurring Expenses (options 8 & 9)
+- Income history log with dates and notes
+- Search expenses by amount range
+- Category pie chart (option 20)
+- CSV export to `~/BudgetTrackerData/`
+- Rotating backups — keeps last 5 timestamped backup files
+- Password hint — shown on last login attempt before lockout
+- Password reset option after 3 failed attempts (wipes all data)
     
 > [!NOTE]
 > - All data is saved locally in budget_data.json for persistence between sessions
