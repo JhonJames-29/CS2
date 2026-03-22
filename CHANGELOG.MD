@@ -4,6 +4,28 @@ This file lists all the updates made to our Budget Tracker project.
 
 ---
 
+## Release v2.2 — March 22, 2026
+
+### Added:
+
+- Expense notes field — optional description on each expense
+- View and Delete Recurring Expenses (options 8 & 9)
+- Income history log with dates and notes
+- Search expenses by amount range
+- Category pie chart (option 20)
+- CSV export to `~/BudgetTrackerData/`
+- Rotating backups — keeps last 5 timestamped backup files
+- Password hint — shown on last login attempt before lockout
+- Password reset option after 3 failed attempts (wipes all data)
+- `VERSION` constant at top of file
+
+### Fixed
+- Header and exit message still showed `v2.0` instead of current version
+- `editExpense` had a leftover dead `inputFloat()` call
+- Amount formatting was inconsistent — standardized to 2 decimal places
+
+**NOTE:** The logic of the major release version 3.0 will be based on version 2.2!
+
 ## Test Release v0.4.0b1_gui — March 11, 2026
 **New implementation of GUI's!**
 
