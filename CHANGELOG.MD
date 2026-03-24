@@ -4,6 +4,53 @@ This file lists all the updates made to our Budget Tracker project.
 
 ---
 
+Budget Tracker v3.0 — Major Release; **The GUI Update**!
+
+### Major Changes: GUI & UX Overhaul
+
+**New Features:**
+- Full Tkinter GUI replacing the terminal interface.
+- Tabbed interface with 7 tabs: Dashboard, Budget, Expenses, Income & Savings, Reports, Settings, Help.
+- Visual summary cards for Income, Spent, Remaining, and Health.
+- Savings progress bar with dynamic coloring and milestone messages.
+- Expense and recurring expense tables with real-time updates and color-coded budget warnings.
+- Income history table integrated in UI.
+- Message boxes used for confirmations, errors, and warnings (replacing terminal prints).
+
+
+**Security:**
+- `PasswordManager` integrated with GUI login window.
+- Optional password hint displayed in login form.
+- Reset password feature via confirmation dialog.
+
+
+**Data Management:**
+- JSON persistence retained, with auto-save and backup system.
+- Recurring expenses automatically applied on app startup.
+- Methods renamed/refactored (`saveData` → `save`, `loadData` → `load`, `applyRecurringExpenses` → `apply_recurring`).
+- GUI actions now call `DataManager` methods instead of direct terminal input.
+
+
+**Visual & UX Improvements:**
+- Dark-themed color palette, consistent fonts, and styled widgets.
+- Treeviews for categories, expenses, and recurring entries with color-coded status.
+- Improved layout for forms and buttons for clarity and accessibility.
+
+**Removed / Deprecated:**
+- Terminal-based menus, typewriter effect, and colored terminal prints.
+- Manual command-line interaction replaced by GUI event-driven system.
+
+**Suggestions for Future Versions:**
+| Suggestions | Reasons |
+| -------- | ------- |
+| User Profiles | For multi-user support with password-protected profiles. |
+| Undo/Redo Feature | For users to allow undoing accidental edits or deletions. |
+| Performance Optimizations | For a more faster, fluid-like user experience (may involve using programming languages aside from Python.) |
+| Theme Customization | Light and Dark modes/Color personalization. |
+| Notifications | Desktop notifications or alerts for recurring expenses auto-apply. |
+
+---
+
 ## Release v2.2 — March 22, 2026
 
 ### Added:
