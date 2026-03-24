@@ -4,7 +4,7 @@ This file lists all the updates made to our Budget Tracker project.
 
 ---
 
-Budget Tracker v3.0 — Major Release; **The GUI Update**!
+## Budget Tracker v3.0 — Major Release; **The GUI Update**!
 
 ### Major Changes: GUI & UX Overhaul
 
