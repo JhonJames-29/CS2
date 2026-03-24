@@ -8,6 +8,8 @@ Budget Tracker is designed to help users manage their personal finances whilst b
 
 Version 2.0 introduces major upgrades including password protection, recurring expenses, savings tracking, financial health indicators, backup systems, and enhanced reporting tools.
 
+Version 3.0 introduces major GUI and UX overhauls that replaced terminal-based UI with a full Tkinter GUI with 7 tabs: Dashboard, Budget, Expenses, Income & Savings, Reports, Settings, Help.
+
 This program is suitable for beginners, students, or anyone looking for a simple way to understand their financial habits.
 
 ---
@@ -16,63 +18,127 @@ This program is suitable for beginners, students, or anyone looking for a simple
 
 - Record total income and add additional income
 - Set total income (replaces current value)
-- Set budgets for multiple categories (food, transport, entertainment, etc.)
+- Set budgets for multiple categories (`food`, `transport`, `entertainment`, etc.)
 - Edit and delete categories
 - Add and track expenses per category
 - Edit and delete individual expenses
 - Add recurring expenses with specified frequency (daily, weekly, monthly)
-- Automatic application of recurring expenses based on frequency
+- Automatic application of recurring expenses on startup based on frequency
 - View per-category spending, total spent, and remaining money
-- Overspending warnings when expenses exceed budgets or reach 80% of budget
+- Overspending warnings via GUI popups when expenses exceed budgets or reach 80% of budget
 - View savings goal and track progress toward it
-- Visual savings progress bar showing percentage of goal achieved
+- Visual savings progress bar in the GUI showing percentage of goal achieved
 - View monthly expenses and breakdown by category
 - Search expenses by category or date range
 - Financial health indicator (Healthy / Caution / Overspending)
 - Graphical reports using matplotlib:
     - Category Spending Chart (Budget vs Spent per category)
     - Monthly Expense Trend
-- Save and load all data using JSON (budget_data.json)
-- Backup and restore data to prevent accidental loss (budget_backup.json)
+    - Pie charts for category breakdown
+- Save and load all data using JSON (`budget_data.json`)
+- Backup and restore data to prevent accidental loss (`budget_backup.json`, `budget_backup_[date].json`)
+- Automatic backup rotation keeping the latest 5 backups
 - Auto-save feature: Automatically saves changes when enabled
 - Password protection with hashed passwords (SHA-256)
 - Password masking during input
 - Password change functionality
 - Input validation for numeric values, dates, and non-empty strings
+- Full GUI interface with 7 tabs: Dashboard, Budget, Expenses, Income & Savings, Reports, Settings, Help
+- Login window that restricts access until authentication
 - Clean and readable console interface with organized summary layout
-- Typing effect for dynamic text display
 - Color-coded messages for warnings, confirmations, and summaries
+- Typing effect for dynamic text display (Older versions only)
 - Polished menu interface with clear navigation
 - Toggleable auto-save feature
-- System-friendly for CLI (Windows and Unix-based systems)
+- System-friendly for CLI (Windows and Unix-based systems) retained in background logic
 
 ---
 
 ## Data Files:
 - budget_data.json — Main data file
-- budget_backup.json — Automatic backup file
+- budget_backup.json — Automatic backup file (main)
+    - budget_backup_[date] (*can be in multiple quantities*)— Automatic backup rotation keeping the latest 5 backups, while overwriting the main one.
 - password.txt — Encrypted password storage
+- password_hint.txt — A hint that the user provides 
 
 ## Data Structures:
 **Data Storage Format (JSON):**
 
 ```json
 {
-    "income": 2000,
+    "income": 5000.0,
     "categories": {
-        "Food": 500,
-        "Transport": 300
+        "Food": 600.0,
+        "Rent": 1500.0,
+        "Transportation": 300.0,
+        "Entertainment": 200.0,
+        "Utilities": 250.0,
+        "Healthcare": 150.0,
+        "Shopping": 300.0,
+        "Savings": 500.0
     },
     "expenses": [
         {
-            "category": "Food",
-            "amount": 450,
-            "date": "2025-02-01",
-            "recurring": false
+            "category": "Rent",
+            "amount": 1500.0,
+            "date": "2026-02-01"
+        },
+        {
+            "category": "Savings",
+            "amount": 500.0,
+            "date": "2026-02-01"
+        },
+        {
+            "category": "Healthcare",
+            "amount": 60.0,
+            "date": "2026-02-11"
+        },
+        {
+            "category": "Transportation",
+            "amount": 48.0,
+            "date": "2026-02-12"
+        },
+        {
+            "category": "Rent",
+            "amount": 1500.0,
+            "date": "2026-03-22",
+            "recurring": true
+        },
+        {
+            "category": "Savings",
+            "amount": 500.0,
+            "date": "2026-03-22",
+            "recurring": true
+        },
+        {
+            "category": "Utilities",
+            "amount": 50.0,
+            "date": "2026-03-22",
+            "recurring": true
         }
     ],
-    "savings_goal": 500,
-    "recurring_expenses": [],
+    "savings_goal": 3000.0,
+    "recurring_expenses": [
+        {
+            "category": "Rent",
+            "amount": 1500.0,
+            "frequency_days": 30,
+            "last_added": "2026-03-22"
+        },
+        {
+            "category": "Savings",
+            "amount": 500.0,
+            "frequency_days": 30,
+            "last_added": "2026-03-22"
+        },
+        {
+            "category": "Utilities",
+            "amount": 50.0,
+            "frequency_days": 7,
+            "last_added": "2026-03-22"
+        }
+    ],
+    "income_history": [],
     "autosave": true
 }
 ```
@@ -87,6 +153,7 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - 3-attempt login limit
 - Change password option
 - Session authentication
+- A password hint
 
 ### Savings & Financial Health
 - Set savings goals
@@ -98,9 +165,9 @@ This program is suitable for beginners, students, or anyone looking for a simple
     - 🔴 Overspending
  
 ### Data Management
-- Save and load using JSON (budget_data.json)
+- Save and load using JSON (`budget_data.json`)
 - Auto-save toggle
-- Automatic backup creation (budget_backup.json)
+- Automatic backup creation (`budget_backup.json`)
 - Restore from backup option
 - Input validation for numbers and dates
 
@@ -147,34 +214,49 @@ The user must have the operating system Windows 10/11 (As executable files are o
 # **Methodology:**
 
 ## 1. Implementation of Core Features
-- The Budget Tracker system was developed using Python and follows an object-oriented design. The core features were included such as:
+- The Budget Tracker system is developed in Python using an object-oriented design with a clean layered architecture. Key features in version 3.0 include:
 
-    1. Income Management - The manipulation of total income, stored as a numeric attribute within the BudgetTracker class.
+    1. Income & Savings Management- The manipulation of total income, stored as a numeric attribute within the BudgetTracker class.
     2. Budget Category Management
     3. Expense Tracking
     4. Recurring Expense System
-    5. Passowrd Authentication - The password system is handled by the PasswordManager class.
+    5. Passowrd Authentication - Managed by `PasswordManager` with SHA-256 hashing, optional hint, three-attempt limit, and a full data-reset option.
     6. Data Persistence and Backup - Financial data is stored in a JSON file format for readability, storage, and easy access.
     7. Graph Integration - Data can be represented in a Graph.
+    8. GUI with Tabs – The main window (BudgetApp) uses Tkinter with seven tabs: Dashboard, Budget, Expenses, Income & Savings, Reports, Settings, and Help.
+    9. Financial Analytics
 
 ---
 
 ## 2. **Technologies used**
 | Technology | Purpose | Justification |
 | -------- | -------- | -------- |
-| Python | Code development language. | Python uses simple, readable syntax which also includes a strong library support |
-| JSON | Storage for data | A .json file is lightweight, readable, and does not require a database. |
-| hashlib (SHA-256) | Used to hash passwords | A standard for hashing.
-| matplotlib | Data visualization | Widely used and reliable at plotting data as graphs.
-| Pyinstaller | Converts a .py file into an executable file (.exe) | Enables standalone distribution without requiring users to install Python.
+| `Python` | Code development language. | Python uses simple, readable syntax which also includes a strong library support |
+| `JSON` | Storage for data | A .json file is lightweight, readable, and does not require a database. |
+| `hashlib` (SHA-256) | Used to hash passwords | A standard for hashing. |
+| `Tkinter` | Graphical user interface | Built-in Python library for cross-platform GUIs, with support for windows, tabs, buttons, and dialogs |
+| `tkinter.ttk` | Themed widgets | Provides advanced widgets like Treeview, Notebook (tabs), and Progressbars for a professional interface | 
+| `tkinter.messagebox` | Popup dialogs | Allows info, warning, and error messages to the user |
+| `os & shutil` | File management and backups | Handle file operations, directories, and backup rotations |
+| `csv` | Export financial data | Allows easy export of data for external use or reporting |
+| `datetime` | Handle dates and recurring expenses | Enables automatic date-stamping and recurring expense calculations |
+| `matplotlib` | Data visualization | Widely used and reliable at plotting data as graphs. |
+| `Pyinstaller` | Converts a `.py` file into an executable file (`.exe`) | Enables standalone distribution without requiring users to install Python. |
 
 ---
 
-## 3. **Key Design Decisions and Trade-offs:**
+## 3. **Key Design Decisions and Trade-offs: (!RESPONSES FROM VERSION RELEASE 2.0!)**
 - We decided to use JSON instead of an SQL Database as it is simple to setup and does not require an installation, but this won't allow us to scale up for large databases because the system only targets individual users.
 - We used SHA-256 hashing for password storage. Although it is secure and lightweight, it is the only encryption layer for protecting passwords.
 - We also developed the program as a CLI (Command Line Interface) application instead of a GUI (Graphical User Interface) application as it is lightweight and faster to develope. Although it is less visually interactive, the focus of the project is financial logic and simple data handling rather than graphicall interface design.
 - Lastly, we've implemented the use of a toggleable auto-save feature. It prevents accidental data lass and improves reliability, but it slightly increase file write operations.
+
+## 3. Key Design Decisions and Trade-offs (Updated for v3.0)
+- We decided to continue using JSON instead of an SQL database because it is simple to set up and does not require installation, though it is not ideal for very large datasets; the system is still intended for individual users.
+- We retained SHA-256 hashing for password storage. It is secure and lightweight, but it remains the only encryption layer for protecting passwords.
+- The program was upgraded to a GUI (Graphical User Interface) using Tkinter instead of the previous CLI. This makes the app more visually interactive and user-friendly, though it adds complexity in development.
+- We also implemented automatic data saving and backup. Autosave prevents accidental data loss and improves reliability, while a timestamped backup system ensures recovery. However, frequent saves slightly increase file write operations.
+- Features like recurring expenses and financial dashboards were added, prioritizing automation and ease of monitoring over maintaining a minimal interface.
 
 ---
 
@@ -204,12 +286,13 @@ The user must have the operating system Windows 10/11 (As executable files are o
 - Release v2.0 includes new implementations that enhances user experience while maintaining security.
 - Test Release v0.4.0b1_gui includes GUI implementations that drastically enhances user experience. Although not recommended for use, this serves as the foundation of the transition into a GUI based program. [Test Release Only!!!]
 - Release v2.2's logic will be implemented to major release v3.0!
+- Release v3.0 serves as an introduction to GUI's for succeeding versions! :D
 
 ---
 
 ## Example Output: 
 
-**Sample Data (from user input):**
+**Sample Data (from user input): (!ONLY APPLICAPLE FROM VERSION RELEASE 2.0 OR BELOW!)**
 
 ```python
 income = 2000
@@ -339,7 +422,7 @@ Release v2.2 includes:
 - Session authentication prevents repeated password prompts
 
 ## Known Limitations
-- Terminal colors may not work correctly on all terminals
+- Terminal colors may not work correctly on all terminals (Applicable from versions that are CLI-Based)
 - Matplotlib is optional but required for graph features
 - Password file is stored locally (not cloud-synced)
 - Data persistence uses JSON files (not encrypted)
@@ -349,7 +432,7 @@ Release v2.2 includes:
 
 ## Contributers:
 
-- Student 1: Sam Arquita  (encoded the program, did the changelog)  
+- Student 1: Sam Arquita 🐈 (encoded the program, did the changelog)  
 - Student 2: Navine Bolo (gave the idea, wrote the readme)  
 - Student 3: Ashley Makinano (made a rough Flowgorithm for version 0.0.1, made the proposal )
 
