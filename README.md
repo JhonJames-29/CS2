@@ -60,7 +60,7 @@ This program is suitable for beginners, students, or anyone looking for a simple
     - budget_backup_[date] *(can be in multiple quantities)*— Automatic backup rotation keeping the latest 5 backups, while overwriting the main one.
 - password.txt — Encrypted password storage
 - password_hint.txt — A hint that the user provides
-- expenses_export_[date] — A spreadsheet file that converts the data *(from `budget_data.json`)* into a table. *(Optional file)*
+- expenses_export_[date].csv — A spreadsheet file (`.csv`) that converts the data *(from `budget_data.json`)* into a table. *(Optional file)*
 
 ## Data Structures:
 **Data Storage Format (JSON):**
