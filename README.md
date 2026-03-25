@@ -47,7 +47,7 @@ This program is suitable for beginners, students, or anyone looking for a simple
 - Login window that restricts access until authentication
 - Clean and readable console interface with organized summary layout
 - Color-coded messages for warnings, confirmations, and summaries
-- Typing effect for dynamic text display (Older versions only)
+- Typing effect for dynamic text display *(Older versions only)*
 - Polished menu interface with clear navigation
 - Toggleable auto-save feature
 - System-friendly for CLI (Windows and Unix-based systems) retained in background logic
@@ -57,9 +57,10 @@ This program is suitable for beginners, students, or anyone looking for a simple
 ## Data Files:
 - budget_data.json — Main data file
 - budget_backup.json — Automatic backup file (main)
-    - budget_backup_[date] (*can be in multiple quantities*)— Automatic backup rotation keeping the latest 5 backups, while overwriting the main one.
+    - budget_backup_[date] *(can be in multiple quantities)*— Automatic backup rotation keeping the latest 5 backups, while overwriting the main one.
 - password.txt — Encrypted password storage
-- password_hint.txt — A hint that the user provides 
+- password_hint.txt — A hint that the user provides
+- expenses_export_[date] — A spreadsheet file that converts the data *(from `budget_data.json`)* into a table. *(Optional file)*
 
 ## Data Structures:
 **Data Storage Format (JSON):**
